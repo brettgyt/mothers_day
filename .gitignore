@@ -1,0 +1,16 @@
+# Claude session settings
+.claude/
+
+# OS detritus
+.DS_Store
+Thumbs.db
+
+# Editor swap / backup files
+*.swp
+*.swo
+*~
+
+# Originals of media that shouldn't ship to Pages
+images/_originals/
+*.psd
+*.ai

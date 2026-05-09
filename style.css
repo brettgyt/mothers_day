@@ -683,20 +683,29 @@ a { color: inherit; text-decoration: none; }
     justify-self: center;
   }
   .year:not(.schoolwork) .story-card {
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    row-gap: 18px;
-  }
-  .year:not(.schoolwork) .story-card > * {
-    grid-column: 1;
-    grid-row: auto;
+    display: block;
+    padding: 4px;
   }
   .year:not(.schoolwork) .story-card .card-img {
+    display: block;
+    width: 100%;
     max-width: 520px;
     max-height: none;
-    justify-self: center;
-    grid-column: 1;
-    grid-row: auto;
+    aspect-ratio: 4 / 5;
+    margin: 0 auto 18px;
+  }
+  .year:not(.schoolwork) .card-roman {
+    margin-bottom: 6px;
+  }
+  .year:not(.schoolwork) .card-title {
+    margin: 0 0 12px;
+    font-size: clamp(28px, 7vw, 38px);
+  }
+  .year:not(.schoolwork) .card-title::after {
+    margin-top: 14px;
+  }
+  .year:not(.schoolwork) .card-text {
+    margin-top: 0;
   }
 }
 

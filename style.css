@@ -488,6 +488,10 @@ a { color: inherit; text-decoration: none; }
 .story-card.polaroid:nth-child(13) { rotate: 0.6deg; }
 .story-card.polaroid:nth-child(14) { rotate: -1.8deg; }
 .story-card.polaroid:nth-child(15) { rotate: 1.4deg; }
+.story-card.polaroid:nth-child(16) { rotate: -1deg; }
+.story-card.polaroid:nth-child(17) { rotate: 2.1deg; }
+.story-card.polaroid:nth-child(18) { rotate: -2.3deg; }
+.story-card.polaroid:nth-child(19) { rotate: 1.2deg; }
 
 .story-card.polaroid:hover {
   rotate: 0deg;
@@ -502,9 +506,9 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 14px;
 }
 
-/* video-bearing polaroid: wider 16:9 frame, dark inner */
+/* video-bearing polaroid: tall 9:16 frame to match phone-portrait videos, dark inner */
 .story-card.polaroid:has(video) .card-img {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;
   background: #000;
 }
 
@@ -676,6 +680,7 @@ a { color: inherit; text-decoration: none; }
   .cover-image {
     max-width: 480px;
     width: 100%;
+    justify-self: center;
   }
   .year:not(.schoolwork) .story-card {
     grid-template-columns: 1fr;
@@ -690,6 +695,8 @@ a { color: inherit; text-decoration: none; }
     max-width: 520px;
     max-height: none;
     justify-self: center;
+    grid-column: 1;
+    grid-row: auto;
   }
 }
 
@@ -700,6 +707,18 @@ a { color: inherit; text-decoration: none; }
   }
   .year-nav {
     justify-content: flex-end;
+  }
+  .carousel-track {
+    gap: 16px;
+  }
+  .year-controls {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .nav-btn-large {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
   }
 }
 
